@@ -7,12 +7,12 @@ import { TbGridDots } from 'react-icons/tb'
 const Navbar = () => {
 
   const [active, setActive] = useState('navBar');
-  /* Function to toggle navBar */
+  /* Toggle navbar */
   const showNav = () => {
     setActive('navBar activeNavbar');
   }
 
-   /* Function to remove navBar */
+   /* remove navbar  */
    const removeNavbar = () => {
     setActive('navBar');
   }
