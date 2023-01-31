@@ -1,0 +1,176 @@
+
+
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgn(240, 240, 246);
+    --cardBG: rgb(225, 225 235);
+    --cardHover: rgb(255, 255, 255);
+    --starColor: rgb(255, 204, 0);
+    --pinColor: rgb(31, 147, 13);
+}
+
+.main {
+    width: 100%;
+
+    .secTitle {
+        .title {
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after {
+                position: absolute;
+                content: " ";
+                background: var(--SecondaryColor);
+                height: 0.25rem;
+                width: 5.313rem;
+                bottom: 0.125rem;
+                left:  9.375rem;
+                z-index: -1;
+            }
+        }
+    }
+
+    .secContent {
+       justify-content: center;
+       gap: 1.5rem;
+
+       .singleDestination {
+        height: 100%;
+        display: grid;
+        row-gap: 10px;
+        padding: 1rem;
+        border-radius: 10px;
+        align-items: center;
+        background: var(--cardBG);
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0.849);
+        overflow: hidden;
+
+        &:hover {
+            background: var(--cardHover);
+            box-shadow: 0 2px 4px rgba(85, 85, 114, 0.549);
+            transition: .3s ease;
+        }
+
+         .imageDiv{
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: 2s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                    transition: 2s ease;
+                }
+            }
+         }
+
+         .cardInfo {
+            padding: 1rem;
+
+            .destTitle {
+                color: var(--blackColor);
+                font-size: 1.25rem;
+            }
+
+            .continent {
+                gap: .5rem;
+                position: relative;
+                margin-bottom: .5rem;
+
+
+
+                .price {
+                    color: var(--PrimaryColor);
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    position: absolute;
+                    right: 10px;
+                    
+                }
+            }
+
+
+            .pin-icon {
+                color: var(--SecondaryColor);
+                font-size: 18px;
+            }
+
+            .star-icon {
+                color: var(--starColor);
+                font-size: 18px;
+            }
+
+            .name {
+                color: var(--textColor);
+                font-weight: 400;
+                font-size: 14px;
+            }
+         }
+
+         .culture {
+            margin-top: .5rem;
+            border-top: 1.5px solid var(--greyText);
+            border-bottom: 1.5px solid var(--greyText);
+
+            .grade {
+               margin-top: .5rem;
+               width: 100%;
+               color: var(--textColor);
+               max-width: 100px;
+               line-height: 10px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 11px;
+               font-weight: 700;
+               margin-bottom: .5rem;
+               
+               small {
+                 text-align: center;
+                 background: var(--gradientColor);
+                 border-radius: 1rem;
+                 color: var(--whiteColor);
+                 padding: 1px 10px;
+                 font-size: 10px;
+               }
+            }
+         }
+            .desc ·{
+                font-size: 13.5px;
+                color: var(--textColor);
+                font-weight: 500;
+            }
+
+            .btn {
+                margin-top: 1rem;
+                color: var(--whiteColor);
+                font-weight: 600;
+                justify-content: space-between;
+                gap: .2rem;
+
+                .icon {
+                    align-self: center;
+                    font-size: 18px;
+                }
+            }
+       }
+    }
+}
