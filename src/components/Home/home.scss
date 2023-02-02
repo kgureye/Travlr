@@ -154,25 +154,90 @@
             }
 
         }
-         }
-
-
-         .homeFooterIcons {
-            width: 100%;
-            justify-content: space-between;
-
-            .icon {
-                font-size: 20px;
-                margin: 0 5px;
-                color: var(--whiteColor);
-                font-weight: 600;
-                &:hover {
-                    color: var(--PrimaryColor);
-                }
-            }
-         }
+         }      
   }
 }
 
     /* Media Queries */
 
+ @media screen and (min-width: 500px) {
+    .home{
+        .homeContent {
+            .textDiv{
+                .smallText {
+                    font-size: 1rem;
+                }
+            
+
+            .homeTitle {
+                position: relative;
+                font-size: 2rem;
+                width: max-content;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: var(--SecondaryColor);
+                    height: 5px;
+                    width: 80px;
+                    right: -1px;
+                    bottom: 5px;
+                    z-index: -1;
+                }
+            }
+          }
+
+          .cardDiv {
+            grid-auto-columns: repeat (2, 1fr);
+          }
+        }
+    }
+ }
+
+ @media screen and (min-width: 660px) {
+    .home {
+        .homeContent {
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(4, 1fr) ;
+            }
+        }
+    }
+ }
+
+
+ @media screen and (min-width: 940px) {
+    .home {
+       height: 70vh;
+    }
+ }
+
+
+
+ @media screen and (min-width: 1240px) {
+    .home {
+       height: 95vh;
+
+       .homeContent {
+            padding-left: 0;
+            padding-right: 0;
+
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(4, 1fr) ;
+                .input {
+                   margin-bottom: 1rem;
+                }
+
+                .searchOptions {
+                   bottom: .1rem;
+                   padding: 8px 1rem;
+
+                   span {
+                     font-size: 17px;
+                   }
+                }
+            }
+       }
+    }
+ }
