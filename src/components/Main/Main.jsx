@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './main.css'
+
+/* Aos animations */
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 /* Images */
 import img from '../../assets/img (1).jpg'
@@ -11,20 +15,24 @@ import img6 from '../../assets/img (6).jpg'
 import img7 from '../../assets/img (7).jpg'
 import img8 from '../../assets/img (8).jpg'
 import img9 from '../../assets/img (9).jpg'
+import img10 from '../../assets/img (10).jpg'
+import img11 from '../../assets/img (11).jpg'
+import img12 from '../../assets/img (12).jpg'
 
 /* Icons */
  import { HiOutlineLocationMarker, HiOutlineClipboardCheck } from 'react-icons/hi'
  import { AiFillStar } from 'react-icons/ai'
 
 const Data = [
+
   {
   id:1,
   imgSrc: img,
   destTitle: 'Bora Bora',
-  destLocation: 'New Zealand',
-  grade: 'Rating',
-  fees: '$700',
-  description: 'The epitome of romance, Bora Bora is one of the best travel destinations in the World. This place is known for its luxurious stays and adventurous activities. ' 
+  destLocation: 'Stillehavet',
+  grade: '',
+  fees: 'kr 10500',
+  description: 'Bora Bora er en fantastisk tropisk øy som ligger på Society Islands of French Polynesia, kjent for sitt turkise vann, frodige landskap og luksuriøse feriesteder. Enten du er ute etter avslapning, eventyr eller kulturelle opplevelser, har Bora Bora noe å tilby for alle.' 
   },
 
 
@@ -34,8 +42,8 @@ const Data = [
   destTitle: 'Machu Picchu',
   destLocation: 'Peru',
   grade: 'CULTURAL RELAX ',
-  fees: '$600',
-  description: 'Huayna Picchu is a mountain in Peru, rising over Machu Picchu, the so-called Lost City of Incas. This place is popular among tourists as the sunrise from the Sun Gate is simply spectacular.' 
+  fees: 'kr 12000',
+  description: 'Den mest kjente attraksjonen er Intihuatana-steinen, en unik utskåret stein som ble brukt av inkaene til astronomiske observasjoner. Den fantastiske utsikten over de omkringliggende fjellene og den unike arkitekturen gjør turistmålet til et must for enhver reisende.'  
   },
 
 
@@ -45,19 +53,19 @@ const Data = [
   destTitle: 'Great Barrier Reef',
   destLocation: 'Australia',
   grade: 'CULTURAL RELAX ',
-  fees: '$700',
-  description: 'One of the most remarkable Australian natural gifts is the Great Barrier Reef. The hallmark of this place is ‘lavish’ and ‘beauty’. Always interesting to be in this place'  
+  fees: 'kr 14000',
+  description: 'Utforsk det mangfoldige marinelivet gjennom aktiviteter som snorkling, dykking og båtturer. Noen av de mest populære attraksjonene inkluderer de fargerike korallformasjonene, et mangfoldig utvalg av tropiske fisker, og møter med gigantiske havskilpadder og lekne delfiner.'  
   },
 
 
   {
   id:4,
   imgSrc: img4,
-  destTitle: 'Cappadocia',
+  destTitle: 'Kappadocia',
   destLocation: 'Turkey ',
   grade: 'CULTURAL RELAX ',
-  fees: '$800',
-  description: '  According to the World Tourism Ranking, 45 Million people visit Turkey each year, and from that about 2 Million come to visit Cappadocia. This place is known for its luxurious stays and adventurous activities '  
+  fees: 'kr 4500',
+  description: 'Kappadokia er en unik geologisk formasjon med fe skorsteiner, huleboliger og intrikate underjordiske byer. Luftballongturer gir en fantastisk utsikt over landskapet, mens Göreme friluftsmuseum og Zelve friluftsmuseum gir et innblikk i regionens rike historie og kultur.'
   },
 
 
@@ -67,8 +75,8 @@ const Data = [
   destTitle: 'Guanajuato',
   destLocation: 'Mexico',
   grade: 'CULTURAL RELAX ',
-  fees: '$1100',
-  description: 'A city in central Mexico, Guanajuato is known for its history of silver mining and colonial architecture. The houses in the city are very attractively painted with the most bright colors available. Always welcome.'  
+  fees: 'kr 13000',
+  description: 'Guanajuato er en historisk by i Mexico kjent for sin fantastiske koloniale arkitektur, sjarmerende torg og livlige atmosfære. Noen av toppattraksjonene inkluderer Alhóndiga de Granaditas, et tidligere kornlager som nå huser et museum, og Templo de San Francisco, en vakker barokkkirke. '  
   },
 
 
@@ -78,8 +86,8 @@ const Data = [
   destTitle: 'Cinque Terre',
   destLocation: 'Italy ',
   grade: 'CULTURAL RELAX ',
-  fees: '$840',
-  description: 'The vibrant hues of the houses are its benchmark and explain the beauty of this place. Also, if you are a foodie and love seafood, you will be exhilarated with the choice you are about to get here. Happy exploring great food! '  
+  fees: 'kr 4800',
+  description: 'Cinque Terre, en fantastisk kystregion som består av fem landsbyer som ligger på klipper med utsikt over Middelhavet. Besøkende kan gå de naturskjønne stiene som forbinder landsbyene og nyte den fantastiske utsikten, eller ta en båttur for å se regionen fra havet.'
   },
 
 
@@ -87,10 +95,10 @@ const Data = [
   id:7,
   imgSrc: img7,
   destTitle: 'Angkor Wat',
-  destLocation: 'Cambodia',
+  destLocation: 'Kambodsja',
   grade: 'CULTURAL RELAX ',
-  fees: '$790',
-  description: 'Angkot wat represents the entire range of Khmer art from the 9th to the 15th century. This temple is considered the heart and soul of Cambodia. This place is known for its luxurious stays and adventurous activities'  
+  fees: 'kr 4000',
+  description: 'Angkor Wat er et kompleks av templer bygget på 1100-tallet og er det største religiøse monumentet i verden. De fantastiske steinutskjæringene og de intrikate detaljene i templene gir et glimt inn i Khmer-imperiets rike historie og kulturelle arv.'
   },
 
 
@@ -100,27 +108,64 @@ const Data = [
   destTitle: 'Taj Mahal',
   destLocation: 'India',
   grade: 'CULTURAL RELAX ',
-  fees: '$900',
-  description: 'An immense mausoleum of white marble, built-in Agra by Mughal emperor Shah Jahan in memory of his wife Mumtaz, the monument is breathtakingly beautiful. This place is known for its luxurious stays and adventurous activities' 
+  fees: 'kr 11000',
+  description: 'Et av de mest kjente landemerkene i verden. Det unike mausoleet ble bygget på 1600-tallet av en Mughal-keiser til minne om sin kone og som et bevis på kjærlighet og hengivenhet. De intrikate utskjæringene og de fantastiske marmordetaljene gjør det til et must-besøk destinasjon.'
   },
 
 
   {
   id:9,
   imgSrc: img9,
-  destTitle: 'Bali Island',
+  destTitle: 'Bali',
   destLocation: 'Indonesia',
   grade: 'CULTURAL RELAX ',
-  fees: '$500',
-  description: 'Bali is an Indonesian Island and one of the best holiday destinations in the Indonesian archipelago. Bali is known for its volcanic mountains, history, art & culture, food, temples and beautiful sandy beaches.' 
-  }, 
+  fees: 'Kr 20000',
+  description: 'Bali Island er kjent for sine fantastiske strender, pulserende kultur og åndelige atmosfære. Øya er også hjemsted for historiske templer, inkludert Uluwatu-tempelet, som tilbyr en fantastisk utsikt over kysten, og Tanah Lot-tempelet, som er bygget på en fjellformasjon omgitt av havet' 
+  },
+
+
+  {
+    id:10,
+    imgSrc: img10,
+    destTitle: 'Gran Canaria',
+    destLocation: 'Kanariøyene',
+    grade: 'CULTURAL RELAX ',
+    fees: 'kr 5000',
+    description: 'Gran Canaria er kjent for sine vakre strender, fantastiske landskap og rike kulturarv. Noen av attraksjonene du må besøke inkluderer den livlige byen Las Palmas, den historiske byen Agaete og Roque Nublo, en vulkansk fjellformasjon som tilbyr panoramautsikt over øya.'
+    },
+
+    {
+      id:11,
+      imgSrc: img11,
+      destTitle: 'Burj Al Arab',
+      destLocation: 'Forente Arabiske Emirater',
+      grade: 'CULTURAL RELAX ',
+      fees: 'kr 16500',
+      description: 'Kjent for sin unike seillignende design og luksuriøse fasiliteter, regnes Burj Al Arab som et av de mest ikoniske hotellene i verden. Ta en omvisning på hotellet, nyt måltider på et av dets flere spisesteder, eller bare beundre den fantastiske utsikten over Persiabukta.'
+      },
+      
+      {
+        id:12,
+        imgSrc: img12,
+        destTitle: 'Kuala Lumpur',
+        destLocation: 'Malaysia',
+        grade: 'CULTURAL RELAX ',
+        fees: 'kr 8500',
+        description: 'En av de mest populære attraksjonene i byen er Petronas Twin Towers, som tilbyr en fantastisk utsikt over byen fra observasjonsdekket. Byen er også hjemsted for en rekke hinduistiske templer og den nasjonale moskeen, et fantastisk stykke moderne islamsk arkitektur.' 
+        },
 ]
 
 const Main = () => {
+
+  // scroll animation w/ useEffect
+  useEffect(() => {
+    Aos.init({duration: 2000})
+  }, [])
+
   return (
     <section className="main container section">
       <div className="secTitle">
-        <h3 className="title">
+        <h3 data-aos="fade-right" className="title">
           Mest populære reisemål
         </h3>
       </div>
@@ -129,7 +174,7 @@ const Main = () => {
         {
           Data.map(({ id, imgSrc, destTitle, destLocation, grade, fees, description }) => {
             return (
-              <div  key={id} className="singleDestination">
+              <div data-aos="fade-up" key={id} className="singleDestination">
                  {/* return single id from the map */}
 
                   <div className="imageDiv">
