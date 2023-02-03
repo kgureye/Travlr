@@ -28,20 +28,6 @@ const Footer = () => {
       </div>
 
       <div className="secContent container">
-        <div className="contactDiv flex">
-           <div  data-aos="fade-up" className="text">
-             <small>KOM I KONTAKT</small>
-             <h2>Reis med oss</h2>
-           </div>
-
-         <div className="inputDiv flex">
-           <input  data-aos="fade-up" type="text" placeholder="E-postadresse" />
-           <button  data-aos="fade-up" className="btn flex" type="submit">
-              Send <FiSend className="icon" />
-           </button>
-         </div>
-       </div>
-
        <div className="footerCard flex">
           <div className="footerIntro flex">
              <div className="logoDiv">
@@ -50,10 +36,24 @@ const Footer = () => {
                 </a>
              </div>
 
-             <div  data-aos="fade-up" className="footerParagraph">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci corporis nesciunt unde cupiditate maiores natus vel eligendi, commodi temporibus, ad, eius possimus labore? Ut neque ullam repellat odio aperiam?
-             </div>
+        <div className="contactDiv">
+           <div  data-aos="fade-up" className="text">
+             <small>KOM I KONTAKT</small>
+             <h2>Reis med oss</h2>
+           </div>
 
+           <div className="inputDiv flex">
+            <p>Vil du motta eksklusive reisetilbud? Abonner på nyhetsbrevet vårt!</p>
+            <input className="inputField" data-aos="fade-up" type="text" placeholder="E-postadresse" />
+            <button  data-aos="fade-up" className="btn flex" type="submit">
+                Abonner <FiSend className="icon" />
+            </button>
+           </div>
+       </div>
+
+           <div  data-aos="fade-up" className="footerParagraph">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci corporis nesciunt unde cupiditate maiores natus
+             </div>
           </div>
 
           <div className="footerLinks grid">
