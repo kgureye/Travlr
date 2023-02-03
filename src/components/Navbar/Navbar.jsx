@@ -5,20 +5,15 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 import { TbGridDots } from 'react-icons/tb'
 
 const Navbar = () => {
-
   const [active, setActive] = useState('navBar');
   /* Toggle navbar */
   const showNav = () => {
     setActive('navBar activeNavbar');
   }
-
    /* remove navbar  */
    const removeNavbar = () => {
     setActive('navBar');
   }
-
-
-
 
   return (
     <section className="navBarSection">
@@ -34,28 +29,22 @@ const Navbar = () => {
         <div className={active}>
            <ul className="navLists flex">
              <li className="navItem">
-               <a href="#" className="navLink">Home</a>
+               <a href="#" className="navLink">Hjem</a>
              </li>
              <li className="navItem">
-               <a href="#" className="navLink">Packages</a>
+               <a href="#" className="navLink">Reisemål</a>
              </li>
              <li className="navItem">
-               <a href="#" className="navLink">Shop</a>
+               <a href="#" className="navLink">Nyheter</a>
              </li>
              <li className="navItem">
-               <a href="#" className="navLink">About</a>
+               <a href="#" className="navLink">Om Travlr</a>
              </li>
              <li className="navItem">
-               <a href="#" className="navLink">Pages</a>
-             </li>
-             <li className="navItem">
-               <a href="#" className="navLink">News</a>
-             </li>
-             <li className="navItem">
-               <a href="#" className="navLink">Contact</a>
+               <a href="#" className="navLink">Kontakt</a>
              </li>
               <button className="btn">
-                <a href="#"> Book Now </a>
+                <a href="#"> Bestill Nå</a>
               </button>
            </ul>
 
@@ -73,3 +62,8 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
+
+
