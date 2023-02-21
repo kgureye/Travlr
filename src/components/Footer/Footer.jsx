@@ -45,8 +45,8 @@ const Footer = () => {
            <div className="inputDiv flex">
             <p>Vil du motta eksklusive reisetilbud? Abonner på nyhetsbrevet vårt!</p>
             <input className="inputField" data-aos="fade-up" type="text" placeholder="E-postadresse" />
-            <button  data-aos="fade-up" className="btn flex" type="submit">
-                Abonner <FiSend className="icon" />
+            <button  data-aos="fade-up" className="footer-btn flex" type="submit">
+                <a href="#">Abonner</a> <FiSend className="icon" />
             </button>
            </div>
        </div>
@@ -172,11 +172,11 @@ const Footer = () => {
              
           </div>
 
-          <div className="footerDiv flex">
-             <small>TRAVLR {year} &copy; Alle rettigheter reservert.</small>
-          </div>
        </div>
       </div>
+           <div className="footer-container">
+             <p class="copyright"> Copyright &copy; {year} TRAVLR. Alle rettigheter reservert.</p>
+           </div>
     </section>
   )
 }

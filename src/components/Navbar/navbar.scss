@@ -37,9 +37,33 @@
        color: var(--whiteColor);
        transform: translateY(5px);
      }
-
    }
 
+  
+    .nav-btn {
+      padding: .6rem 1.5rem;
+      background: var(--whiteColor);
+      border-radius: 3rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      a {
+        color: var(--PrimaryColor);
+        font-weight: 600;
+      }
+    }
+
+    /* Hover effects */
+    .nav-btn:hover {
+      background: var(--PrimaryColor);
+      transition-duration: 0.5s;
+    }
+
+    .nav-btn:hover a {
+      color: var(--whiteColor);
+      font-weight: 600;
+    }
+    
    
    @media screen and (max-width: 768px) {
      .navBar {

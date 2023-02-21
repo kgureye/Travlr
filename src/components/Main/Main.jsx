@@ -30,7 +30,6 @@ const Data = [
   imgSrc: img,
   destTitle: 'Bora Bora',
   destLocation: 'Stillehavet',
-  grade: '',
   fees: 'kr 10500',
   description: 'Bora Bora er en fantastisk tropisk øy som ligger på Society Islands of French Polynesia, kjent for sitt turkise vann, frodige landskap og luksuriøse feriesteder. Enten du er ute etter avslapning, eventyr eller kulturelle opplevelser, har Bora Bora noe å tilby for alle.' 
   },
@@ -41,9 +40,8 @@ const Data = [
   imgSrc: img2,
   destTitle: 'Machu Picchu',
   destLocation: 'Peru',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 12000',
-  description: 'Den mest kjente attraksjonen er Intihuatana-steinen, en unik utskåret stein som ble brukt av inkaene til astronomiske observasjoner. Den fantastiske utsikten over de omkringliggende fjellene og den unike arkitekturen gjør turistmålet til et must for enhver reisende.'  
+  description: 'Den mest kjente attraksjonen er Intihuatana-steinen, en unik utskåret stein som ble brukt av inkaene til astronomiske observasjoner. Den fantastiske utsikten over fjellene og den unike arkitekturen gjør turistmålet til et must for enhver reisende.'  
   },
 
 
@@ -52,9 +50,8 @@ const Data = [
   imgSrc: img3,
   destTitle: 'Great Barrier Reef',
   destLocation: 'Australia',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 14000',
-  description: 'Utforsk det mangfoldige marinelivet gjennom aktiviteter som snorkling, dykking og båtturer. Noen av de mest populære attraksjonene inkluderer de fargerike korallformasjonene, et mangfoldig utvalg av tropiske fisker, og møter med gigantiske havskilpadder og lekne delfiner.'  
+  description: 'Utforsk det mangfoldige marinelivet gjennom aktiviteter som snorkling, dykking og båtturer. Noen av de mest populære attraksjonene inkluderer de fargerike korallformasjonene, et utvalg av tropiske fisker, og møter med havskilpadder og delfiner.'  
   },
 
 
@@ -63,7 +60,6 @@ const Data = [
   imgSrc: img4,
   destTitle: 'Kappadocia',
   destLocation: 'Turkey ',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 4500',
   description: 'Kappadokia er en unik geologisk formasjon med fe skorsteiner, huleboliger og intrikate underjordiske byer. Luftballongturer gir en fantastisk utsikt over landskapet, mens Göreme friluftsmuseum og Zelve friluftsmuseum gir et innblikk i regionens rike historie og kultur.'
   },
@@ -74,7 +70,6 @@ const Data = [
   imgSrc: img5,
   destTitle: 'Guanajuato',
   destLocation: 'Mexico',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 13000',
   description: 'Guanajuato er en historisk by i Mexico kjent for sin fantastiske koloniale arkitektur, sjarmerende torg og livlige atmosfære. Noen av toppattraksjonene inkluderer Alhóndiga de Granaditas, et tidligere kornlager som nå huser et museum, og Templo de San Francisco, en vakker barokkkirke. '  
   },
@@ -85,9 +80,8 @@ const Data = [
   imgSrc: img6,
   destTitle: 'Cinque Terre',
   destLocation: 'Italy ',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 4800',
-  description: 'Cinque Terre, en fantastisk kystregion som består av fem landsbyer som ligger på klipper med utsikt over Middelhavet. Besøkende kan gå de naturskjønne stiene som forbinder landsbyene og nyte den fantastiske utsikten, eller ta en båttur for å se regionen fra havet.'
+  description: 'Cinque Terre, en fantastisk kystregion som består av fem landsbyer som ligger på klipper med utsikt over Middelhavet. Besøkende kan gå de naturskjønne stiene som forbinder landsbyene og nyte den fantastiske utsikten. Er du på ferie i Nord Italia er det verdt å legge turen dit og oppleve vakre Cinque Terre.'
   },
 
 
@@ -96,9 +90,8 @@ const Data = [
   imgSrc: img7,
   destTitle: 'Angkor Wat',
   destLocation: 'Kambodsja',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 4000',
-  description: 'Angkor Wat er et kompleks av templer bygget på 1100-tallet og er det største religiøse monumentet i verden. De fantastiske steinutskjæringene og de intrikate detaljene i templene gir et glimt inn i Khmer-imperiets rike historie og kulturelle arv.'
+  description: 'Angkor Wat er et kompleks av templer bygget på 1100-tallet og er det største religiøse monumentet i verden. De fantastiske steinutskjæringene og de intrikate detaljene i templene gir et glimt inn i Khmer-imperiets rike historie og kulturelle arv. Angkor Wat er på verdensarvlisten til Unesco og anbefales sterkt.'
   },
 
 
@@ -107,9 +100,8 @@ const Data = [
   imgSrc: img8,
   destTitle: 'Taj Mahal',
   destLocation: 'India',
-  grade: 'CULTURAL RELAX ',
   fees: 'kr 11000',
-  description: 'Et av de mest kjente landemerkene i verden. Det unike mausoleet ble bygget på 1600-tallet av en Mughal-keiser til minne om sin kone og som et bevis på kjærlighet og hengivenhet. De intrikate utskjæringene og de fantastiske marmordetaljene gjør det til et must-besøk destinasjon.'
+  description: 'Et av de mest kjente landemerkene i verden. Det unike mausoleet ble bygget av en Mughal-keiser til minne om sin kone og som et bevis på kjærlighet og hengivenhet. De intrikate utskjæringene og de fantastiske marmordetaljene gjør Taj Mahal til et av de mest spektakulære monumentene i verden.'
   },
 
 
@@ -118,9 +110,8 @@ const Data = [
   imgSrc: img9,
   destTitle: 'Bali',
   destLocation: 'Indonesia',
-  grade: 'CULTURAL RELAX ',
   fees: 'Kr 20000',
-  description: 'Bali Island er kjent for sine fantastiske strender, pulserende kultur og åndelige atmosfære. Øya er også hjemsted for historiske templer, inkludert Uluwatu-tempelet, som tilbyr en fantastisk utsikt over kysten, og Tanah Lot-tempelet, som er bygget på en fjellformasjon omgitt av havet' 
+  description: 'Bali Island er kjent som gudenes øy og for sine fantastiske strender, unik kultur og åndelig atmosfære. Øya er omgitt av vulkaner og strender med turkisblått vann. Det er døpt den indonesiske juvelen og er en av de mest berikende destinasjonene i verden. Øya representerer en eksotisk og kulturell øy.' 
   },
 
 
@@ -129,7 +120,6 @@ const Data = [
     imgSrc: img10,
     destTitle: 'Gran Canaria',
     destLocation: 'Kanariøyene',
-    grade: 'CULTURAL RELAX ',
     fees: 'kr 5000',
     description: 'Gran Canaria er kjent for sine vakre strender, fantastiske landskap og rike kulturarv. Noen av attraksjonene du må besøke inkluderer den livlige byen Las Palmas, den historiske byen Agaete og Roque Nublo, en vulkansk fjellformasjon som tilbyr panoramautsikt over øya.'
     },
@@ -138,10 +128,9 @@ const Data = [
       id:11,
       imgSrc: img11,
       destTitle: 'Burj Al Arab',
-      destLocation: 'Forente Arabiske Emirater',
-      grade: 'CULTURAL RELAX ',
+      destLocation: 'FAE',
       fees: 'kr 16500',
-      description: 'Kjent for sin unike seillignende design og luksuriøse fasiliteter, regnes Burj Al Arab som et av de mest ikoniske hotellene i verden. Ta en omvisning på hotellet, nyt måltider på et av dets flere spisesteder, eller bare beundre den fantastiske utsikten over Persiabukta.'
+      description: 'Kjent for sin unike seillignende design og luksuriøse fasiliteter, regnes Burj Al Arab som et av de mest ikoniske hotellene i verden. Ta en omvisning på hotellet, nyt måltider på et av dets flere spisesteder, eller bare beundre den fantastiske utsikten over Persiabukta og nyt det fine været.'
       },
       
       {
@@ -149,7 +138,6 @@ const Data = [
         imgSrc: img12,
         destTitle: 'Kuala Lumpur',
         destLocation: 'Malaysia',
-        grade: 'CULTURAL RELAX ',
         fees: 'kr 8500',
         description: 'En av de mest populære attraksjonene i byen er Petronas Twin Towers, som tilbyr en fantastisk utsikt over byen fra observasjonsdekket. Byen er også hjemsted for en rekke hinduistiske templer og den nasjonale moskeen, et fantastisk stykke moderne islamsk arkitektur.' 
         },
@@ -163,7 +151,7 @@ const Main = () => {
   }, [])
 
   return (
-    <section className="main container section">
+    <section id="main" className="main container section">
       <div className="secTitle">
         <h3 data-aos="fade-right" className="title">
           Mest populære reisemål
@@ -185,7 +173,6 @@ const Main = () => {
                     <div className="continent flex">
                       <HiOutlineLocationMarker className="pin-icon" />
                       <span className="destInfo">{destTitle}, {destLocation} </span>
-
                       <div className="price">
                          <h5>{fees}</h5>
                       </div>
@@ -204,7 +191,7 @@ const Main = () => {
                     </div>
 
                     <button className="btn flex">
-                       Detaljer <HiOutlineClipboardCheck className="icon" />
+                    <a href="#">Detaljer</a><HiOutlineClipboardCheck className="icon" />
                     </button>
                   </div>
               </div>

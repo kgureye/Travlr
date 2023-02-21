@@ -58,26 +58,7 @@ li{
     align-items: center;
 }
 
-.btn {
-    padding: .6rem 1.5rem;
-    background: var(--gradientColor);
-    color: var(--whiteColor);
-    border-radius: 3rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.btn a {
-   font-weight: 500;
-   color: var(--gradientColor);
-}
-
-.btn:hover {
-    background: var(--whiteColor);
-    color: var(--PrimaryColor);
-}
-
+ 
 img, video {
     width: 100%;
     height: auto;

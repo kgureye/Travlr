@@ -32,7 +32,7 @@ const Navbar = () => {
                <a href="#" className="navLink">Hjem</a>
              </li>
              <li className="navItem">
-               <a href="#" className="navLink">Reisemål</a>
+               <a href="#main" className="navLink">Reisemål</a>
              </li>
              <li className="navItem">
                <a href="#" className="navLink">Nyheter</a>
@@ -43,7 +43,7 @@ const Navbar = () => {
              <li className="navItem">
                <a href="#" className="navLink">Kontakt</a>
              </li>
-              <button className="btn">
+              <button className="nav-btn">
                 <a href="#"> Bestill Nå</a>
               </button>
            </ul>

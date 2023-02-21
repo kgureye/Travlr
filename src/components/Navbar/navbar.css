@@ -22,6 +22,7 @@
   padding: 1rem;
   z-index: 1000;
   box-shadow: 0 2px 4px #000;
+  /* Hover effects */
 }
 .header .logo {
   color: var(--whiteColor);
@@ -35,11 +36,30 @@
   color: var(--whiteColor);
   transform: translateY(5px);
 }
+.header .nav-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--whiteColor);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.header .nav-btn a {
+  color: var(--PrimaryColor);
+  font-weight: 600;
+}
+.header .nav-btn:hover {
+  background: var(--PrimaryColor);
+  transition-duration: 0.5s;
+}
+.header .nav-btn:hover a {
+  color: var(--whiteColor);
+  font-weight: 600;
+}
 @media screen and (max-width: 768px) {
   .header .navBar {
     position: absolute;
     background: var(--whiteColorDeam);
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 80%;
@@ -117,6 +137,7 @@
     font-size: 0.9rem;
     font-weight: 500;
   }
+  
   .header .navBar .navLists .navItem .navLink:hover {
     color: var(--PrimaryColor);
   }
